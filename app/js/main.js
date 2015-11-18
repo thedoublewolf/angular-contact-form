@@ -48,13 +48,17 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var FormController = function FormController(FormService) {
+var FormController = function FormController($scope, FormService) {
 
   var vm = this;
 
   vm.addContact = addContact;
 
-  vm.$watch('contact.name');
+  vm.nameErrMsg = 'Name cannot be left empty';
+  vm.emailEmptErrMsg = 'Email cannot be left empty';
+  vm.emailErrMsg = 'Email must contain an @';
+  vm.websiteErrMsg = 'Website must start with http://';
+  vm.messageErrMsg = 'Message cannot be left empty';
 
   function addContact(formObj) {
     console.log(formObj);
@@ -65,7 +69,7 @@ var FormController = function FormController(FormService) {
   }
 };
 
-FormController.$inject = ['FormService'];
+FormController.$inject = ['$scope', 'FormService'];
 
 exports['default'] = FormController;
 module.exports = exports['default'];

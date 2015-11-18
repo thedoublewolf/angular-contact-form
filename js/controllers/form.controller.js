@@ -1,10 +1,14 @@
-let FormController = function(FormService) {
+let FormController = function($scope, FormService) {
   
   let vm = this;
 
   vm.addContact = addContact;
 
-  vm.$watch('contact.name');
+  vm.nameErrMsg = 'Name cannot be left empty';
+  vm.emailEmptErrMsg = 'Email cannot be left empty';
+  vm.emailErrMsg = 'Email must contain an @';
+  vm.websiteErrMsg = 'Website must start with http://';
+  vm.messageErrMsg = 'Message cannot be left empty';
 
   function addContact(formObj) {
     console.log(formObj);
@@ -16,6 +20,6 @@ let FormController = function(FormService) {
 
 };
 
-FormController.$inject = ['FormService'];
+FormController.$inject = ['$scope', 'FormService'];
 
 export default FormController;
