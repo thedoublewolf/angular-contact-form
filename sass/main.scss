@@ -1,0 +1,20 @@
+// Put any @imports here
+// See Readme for a list of supported ones
+@import "foundation";
+
+body {
+  background: #e2ebf3;
+  position: relative;
+}
+
+.container {
+  width: 600px;
+  margin: 20px auto;
+}
+
+form {
+  width: 500px;
+  .messagebox {
+    height: 200px;
+  }
+}
