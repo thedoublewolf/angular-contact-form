@@ -6391,9 +6391,40 @@ body {
   background: #e2ebf3;
   position: relative; }
 
+li {
+  list-style: none; }
+
 .container {
   width: 600px;
   margin: 20px auto; }
+
+.contacts {
+  width: 400px;
+  border: 1px solid #CBCDCE;
+  border-radius: 5px;
+  padding-top: 0;
+  background-color: white; }
+
+.fa {
+  color: #B2B2B2;
+  padding-right: 20px; }
+
+.postName {
+  background-color: #208ABC;
+  margin-top: 0;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white; }
+
+.postEmail {
+  padding-left: 15px; }
+
+.postWebsite {
+  padding-left: 15px; }
+
+.postMessage {
+  padding-left: 15px; }
 
 form {
   width: 600px; }

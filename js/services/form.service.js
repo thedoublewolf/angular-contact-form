@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 let FormService = function($http, PARSE) {
   
   let url = PARSE.URL + 'classes/contact';
@@ -17,6 +15,15 @@ let FormService = function($http, PARSE) {
     let c = new Contact(formObj);
     return $http.post(url, c, PARSE.CONFIG);
   }
+
+  this.getMessages = function () {
+    return $http({
+      url: url,
+      headers: PARSE.CONFIG.headers,
+      method: 'GET',
+      cache: false
+    });
+  };
 
 };
 

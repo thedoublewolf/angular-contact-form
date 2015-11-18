@@ -1,0 +1,17 @@
+<ul class="contacts" ng-repeat="m in messages | orderBy:'-createdAt'">
+  <li class="contact">
+    <h4 class="postName">{{ m.name }}</h4>
+
+    <div class="line">
+      <p class="postEmail"><i class="fa fa-envelope"></i> {{ m.email }}</p>
+    </div>
+
+    <div class="line">
+      <p class="postWebsite"><i class="fa fa-link"></i><a href="{{ m.website }}"> {{ m.website }}</a></p>
+    </div>
+
+    <div class="line">
+      <p class="postMessage"><i class="fa fa-quote-left"></i> {{ m.message }}</p>
+    </div>
+  </li>
+</ul>

@@ -5,6 +5,7 @@ import 'angular-messages';
 import config from './config';
 
 import FormController from './controllers/form.controller';
+import MessagesController from './controllers/messages.controller';
 
 import PARSE from './constants/parse.constant';
 
@@ -15,6 +16,7 @@ angular
   .config(config)
   .constant('PARSE', PARSE)
   .controller('FormController', FormController)
+  .controller('MessagesController', MessagesController)
   .service('FormService', FormService)
 ;
 

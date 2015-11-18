@@ -1,6 +1,4 @@
-import $ from 'jquery';
-
-let FormController = function($scope, FormService) {
+let FormController = function($scope, $state, FormService) {
   
   let vm = this;
 
@@ -17,12 +15,12 @@ let FormController = function($scope, FormService) {
     console.log(formObj);
     FormService.addContact(formObj).then( (res) => {
       console.log(res);
-      alert('contact added!');
+      $state.go('root.messages');
     });
   }
 
 };
 
-FormController.$inject = ['$scope', 'FormService'];
+FormController.$inject = ['$scope', '$state', 'FormService'];
 
 export default FormController;

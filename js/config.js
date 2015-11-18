@@ -8,11 +8,15 @@ let config = function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/layout.tpl.html'
     })
     .state('root.form', {
-      url: '/',
+      url: '/form',
       controller: 'FormController as vm',
       templateUrl: 'templates/form.tpl.html'
+    })
+    .state('root.messages', {
+      url: '/',
+      controller: 'MessagesController as vm',
+      templateUrl: 'templates/messages.tpl.html'
     });
-
 };
 
 config.$inject = ['$stateProvider', '$urlRouterProvider'];
