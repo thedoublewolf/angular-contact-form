@@ -15,9 +15,9 @@
 ### Tools and Assets
 
 - AngularJS
-- Angular Messages for form validation
+- ngMessages for form validation
 - Foundation 5 for layout
-- Angular Router to navigate through app
+- AngularUI Router to navigate through app
 - Parse REST API for storing/managing data
 
 ### Usage
