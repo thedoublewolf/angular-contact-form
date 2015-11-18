@@ -6396,11 +6396,25 @@ body {
   margin: 20px auto; }
 
 form {
-  width: 500px; }
+  width: 600px; }
+  form label {
+    margin-top: 10px; }
   form .messagebox {
+    width: 400px;
     height: 200px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: inline-block; }
   form .box {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: inline-block;
+    width: 400px; }
+  form .small {
+    vertical-align: top;
+    color: red;
+    display: inline-block; }
+  form button {
+    display: block; }
+  form button:disabled {
+    background-color: grey; }
 
 /*# sourceMappingURL=main.css.map */

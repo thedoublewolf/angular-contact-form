@@ -13,13 +13,31 @@ body {
 }
 
 form {
-  width: 500px;
+  width: 600px;
+  label {
+    margin-top: 10px;
+  }
   .messagebox {
+    width: 400px;
     height: 200px;
     margin-bottom: 0;
+    display: inline-block;
   }
   .box {
     margin-bottom: 0;
+    display: inline-block;
+    width: 400px;
+  }
+  .small {
+    vertical-align: top;
+    color: red;
+    display: inline-block;
+  }
+  button {
+    display: block;
+  }
+  button:disabled {
+    background-color: grey;
   }
 }
 

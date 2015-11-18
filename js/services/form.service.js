@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 let FormService = function($http, PARSE) {
   
   let url = PARSE.URL + 'classes/contact';

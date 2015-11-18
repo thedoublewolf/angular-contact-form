@@ -3,25 +3,38 @@
 
   <label>Name</label>
   <input type="text" class="box" placeholder="Jane Doe" name="contactName" ng-model="contact.name" required>
-  <div ng-messages="form.contactName.$error">
+
+  <div id="nameDiv" class="small" ng-messages="form.contactName.$error" ng-show="form.contactName.$dirty && form.contactName.$invalid">
     <small ng-message="required">{{ vm.nameErrMsg }}</small>
   </div>
+
+
   <label>Email</label>
   <input type="email" class="box" placeholder="janedoe@mail.com" name="contactEmail" ng-model="contact.email" required>
-  <div ng-messages="form.contactEmail.$error">
-    <small ng-message="email">{{ vm.emailEmptErrMsg }}</small>
-    <small ng-message="required">{{ vm.emailErrMsg }}</small>
+
+  <div id="emailDiv" class="small" ng-messages="form.contactEmail.$error" ng-show="form.contactEmail.$dirty && form.contactName.$invalid">
+    <small ng-message="email">{{ vm.emailErrMsg }}</small>
+    <small ng-message="required">{{ vm.emailEmptErrMsg }}</small>
   </div>
+
+
   <label>Website</label>
-  <input class="box" placeholder="http://janedoe.com" name="contactWebsite" ng-model="contact.website" required>
-  <div ng-messages="form.contactMessage.$error">
-    <small>{{ vm.websiteErrMsg }}</small>
+  <input type="url" class="box" placeholder="http://janedoe.com" name="contactWebsite" ng-model="contact.website" required>
+
+  <div id="webDiv" class="small" ng-messages="form.contactWebsite.$error" ng-show="form.contactWebsite.$dirty && form.contactName.$invalid">
+    <small ng-message="url">{{ vm.websiteErrMsg }}</small>
+    <small ng-message="required">{{ vm.websiteEmptErrMsg }}</small>
   </div>
+
+
   <label>Message</label>
   <textarea type="text" class="messagebox" placeholder="A friendly message" name="contactMessage" ng-model="contact.message" required></textarea>
-  <div ng-messages="form.contactMessage.$error">
-    <small>{{ vm.messageErrMsg }}</small>
+
+  <div id="msgDiv" class="small" ng-messages="form.contactMessage.$error" ng-show="form.contactMessage.$dirty && form.contactName.$invalid">
+    <small ng-message="required">{{ vm.messageErrMsg }}</small>
   </div>
-  <button>Submit</button>
+
+
+  <button ng-disabled="form.$invalid">Submit</button>
 
 </form>
